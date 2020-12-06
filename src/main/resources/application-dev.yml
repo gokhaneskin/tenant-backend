@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/tenantdb
+    username: postgres
+    password: 1
+    initialization-mode: always
+    platform: postgres
+    initialize: true
+    schema: classpath:/db/postgres/schema.sql
+    data: classpath:/db/postgres/data.sql
+    #continue-on-error: true
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true

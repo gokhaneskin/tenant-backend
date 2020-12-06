@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.math.BigDecimal;
 
 @Entity
 @Table(name = "announcement")
@@ -17,7 +18,7 @@ public class Announcement {
 
     private String description;
 
-    private Double price;
+    private BigDecimal price;
 
     public Long getId() {
         return id;
@@ -43,11 +44,11 @@ public class Announcement {
         this.description = description;
     }
 
-    public Double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 }
